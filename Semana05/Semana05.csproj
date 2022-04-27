@@ -55,6 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ListaProductos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ManCategoria.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,6 +78,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListaProductos.xaml.cs">
+      <DependentUpon>ListaProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManProducto.xaml.cs">
+      <DependentUpon>ManProducto.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManCategoria.xaml.cs">
       <DependentUpon>ManCategoria.xaml</DependentUpon>
