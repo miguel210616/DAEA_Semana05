@@ -1,0 +1,41 @@
+﻿<Window x:Class="Semana05.View.ManCategoria"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Semana05.View"
+        mc:Ignorable="d"
+        Title="ManCategoria" Height="300" Width="400"
+        x:Name="myWindow">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label>ID</Label>
+        <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="1" Margin="0,0,0,10" Text="{Binding ID}" />
+        <Label Grid.Row="1">Nombre</Label>
+        <TextBox x:Name="txtNombre" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" Text="{Binding Nombre}" />
+        <Label Grid.Row="2">Descripción</Label>
+        <TextBox x:Name="txtDescripcion" Grid.Row="2" Grid.Column="1" AcceptsReturn="True"  Text="{Binding Descripcion}"/>
+        <Button Grid.Row="3" x:Name="bntGrabar" Command="{Binding GrabarCommand}" >Grabar</Button>
+        <Button Grid.Row="4" x:Name="bntEliminar" >Eliminar</Button>
+        <Button Grid.Row="5" x:Name="bntCerrar" Command="{Binding CerrarCommand}"  CommandParameter="{Binding ElementName=myWindow}">Cerrar</Button>
+
+    </Grid>
+</Window>

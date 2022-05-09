@@ -55,6 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\ListaCategoriaViewModel.cs" />
+    <Compile Include="ViewModel\ManCategoriaViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\ListaCategoria.xaml.cs">
+      <DependentUpon>ListaCategoria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManCategoria.xaml.cs">
+      <DependentUpon>ManCategoria.xaml</DependentUpon>
+    </Compile>
     <Page Include="ListaProductos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,8 +105,17 @@
       <DependentUpon>ListaCategoria.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\ListaCategoria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ManCategoria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CategoriaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
